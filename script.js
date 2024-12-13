@@ -1,6 +1,5 @@
 let content=document.getElementById('content');
-//let value = document.getElementById("list").value ;
-function myFunction() {
+function AddList() {
     let value = document.getElementById("list").value ;
     if(value===""){
         alert("Please enter list");
