@@ -10,6 +10,9 @@ h2{
     border:none;
     color:#5585b5;
 }
+#list{   
+     margin-right: 5px;
+}
 .title {
    color:white;
    text-align: center;
@@ -28,12 +31,19 @@ h2{
 ::placeholder{
    color: #5585b5;  
 }
+.empty_value{
+    border: 1px solid red !important;
+}
+.empty_value::placeholder{
+    color:red;
+}
 .add_button input{
-    width: 150px;
+    width: 130px;
     color: #53a8b6;
     padding: 10px;
     font-weight: bold;
     box-shadow: 10px 5px 5px #5585b5;
+    border-radius: 5%;
 }
 .item_span{
     width: 800px;
@@ -51,13 +61,14 @@ h2{
     margin: 1px;
     box-shadow: 10px 5px 5px #5585b5;
     transition: 2s;
+    border-radius: 5%;
 }
 .item_button::before{
     display: inline-block; 
     content: '\2713';
     font: var(--fa-font-regular);
 }
-.vehicles{
+.add_list{
     display: flex;
     justify-content: center; 
 }
@@ -90,4 +101,21 @@ h2{
     display: inline-block; 
     content: '\2713';
     font: var(--fa-font-regular);
+}
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    .add_list_input input{
+        width: 200px;
+    }
+    .add_button input{
+        width: 50px;
+    }
+    .item_span {
+        width: 220px;
+    }
+    .item_button {
+        width: 30px;
+    }
 }

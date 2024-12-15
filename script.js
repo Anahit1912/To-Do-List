@@ -2,13 +2,14 @@ let content=document.getElementById('content');
 function AddList() {
     let value = document.getElementById("list").value ;
     if(value===""){
-        alert("Please enter list");
+       document.getElementById("list").classList.add('empty_value');
     }else{
+        document.getElementById("list").classList.remove("empty_value");
         const newDiv = document.createElement("div");
         const newP = document.createElement("p");
         const newInput = document.createElement("input");
         content.appendChild(newDiv);
-        newDiv.classList.add('vehicles');
+        newDiv.classList.add('add_list');
         newDiv.appendChild(newP);
         newDiv.appendChild(newInput);
         newP.innerHTML=value;
